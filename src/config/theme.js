@@ -1,6 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
 import styles from '../styles/styles'
 
+
 const overrides = {
     styles,
     borders,
@@ -13,10 +14,10 @@ const overrides = {
 
 
 const config = {
-    initialColorMode: "dark",
-    useSystemColorMode: true,
+    initialColorMode: "light",
+    useSystemColorMode: false,
 };
 
-const theme = extendTheme({ overrides });
+const theme = extendTheme({ config });
 
 export default theme;

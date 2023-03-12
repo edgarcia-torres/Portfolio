@@ -17,28 +17,40 @@ const RightSection = () => {
     message: '',
     subject: '',
   });
-  const [errors, setErrors] = useState({});
+
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    message: '',
+    subject: '',
+  });
+
   const [mailFail, setMailFail] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
+    console.log(" INFORMATION IS: " + formData);
   };
 
   const validateForm = () => {
-    const newErrors = {};
+    let isValid: boolean = true;
+    const newErrors = { name: '', email: '', subject: '', message: '' };
 
-    if (!formData.name) { newErrors.name = '  Name is required'; }
-    if (!formData.email) { newErrors.email = 'Email is required'; }
+    if (formData.name === '') { newErrors.name = '  Name is required'; isValid = false }
+    if (formData.email === '') { newErrors.email = 'Email is required'; isValid = false }
     else {
       if (!emailRegex.test(formData.email)) {
         console.log("EMAIL ADDRESS VERIFIED INVALID")
         newErrors.email = 'Please enter a valid email address';
+      } else {
+        console.log("EMAIL ADDRESS IS VALID");
       }
     }
-    if (!formData.subject) { newErrors.subject = 'Please enter a subject'; }
-    if (!formData.message) { newErrors.message = 'Please write a message.'; }
-    return Object.keys(newErrors).length === 0;
+    if (formData.subject === '') { newErrors.subject = 'Please enter a subject'; isValid = false }
+    if (formData.message === '') { newErrors.message = 'Please write a message.'; isValid = false }
+
+    return isValid;
   };
 
   const handleSubmit = async (event) => {
@@ -53,8 +65,9 @@ const RightSection = () => {
         const response = await sendContactForm(formData);
         toast({
           title: "Message sent.",
+          description: 'Message sent.',
           status: "success",
-          duration: 5000,
+          duration: 3000,
           position: "top",
           isClosable: true,
         });
@@ -102,6 +115,7 @@ const RightSection = () => {
           <section>
             <input
               type="email"
+              required
               id="email"
               name="email"
               value={formData.email}
@@ -129,6 +143,7 @@ const RightSection = () => {
         <section>
           <textarea
             cols={30} rows={10}
+            required
             id="message"
             name="message"
             value={formData.message}
