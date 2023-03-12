@@ -1,0 +1,67 @@
+import React from "react";
+import { Container, Wrapper } from "./AboutStyles";
+import NextImg from "next/image";
+import Title from "@/elements/Title";
+import Button from "@/elements/Button";
+import { useRouter } from "next/router";
+import AboutImage from "@/assets/edgargt.jpg";
+import { scroller } from "react-scroll";
+
+const About = () => {
+  const route = useRouter();
+  return (
+    <Wrapper className="margin-top" id="aboutSection">
+      <div className="container">
+        <div className="inner-container">
+          <Container>
+            <div className="left">
+              <NextImg
+                src={AboutImage}
+                layout="responsive"
+                alt="About  Image"
+              />
+            </div>
+
+            <div className="right">
+              <Title name="About Myself" />
+              <h4>Electronic engineer and computer programmer</h4>
+              <p className="subtitle-5 description">
+
+                currently working as <span>Front End developer</span>.
+                I am from Colombia. I am passionate about working on projects.
+              </p>
+              <p className="subtitle-5 description">
+                I’m worked as Front End developer in a startup company called
+                <b> Beauty Wall Spot</b>, mangalore for almost 1 Year. Here i
+                worked with building custom wordpress websites. I’m also worked
+                with <b>Moonhive</b> company as intern for 3 months.
+              </p>
+
+              <div className="btnContainer">
+                <Button
+                  name="Contact Me"
+                  marginTop="0rem"
+                  btnHandler={() => {
+                    scroller.scrollTo("contactSection", {
+                      duration: 1500,
+                      delay: 100,
+                      smooth: true,
+                    });
+                  }}
+                />
+                <Button
+                  name="Resume"
+                  marginTop="0rem"
+                  isOutlineBtn
+                  btnHandler={() => route.push("/resume")}
+                />
+              </div>
+            </div>
+          </Container>
+        </div>
+      </div>
+    </Wrapper>
+  );
+};
+
+export default About;

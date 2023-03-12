@@ -1,0 +1,21 @@
+:root {
+  --bg-primary: #000000 !important;
+  --bg-secondary: #370047;
+
+  --primary-color: #000000;
+  --secondary-color: #acdb00;
+
+  --text-light: #c0c0c0;
+  --text-dark: black;
+
+  --primary-font: "Playfair Display", serif;
+  --secondary-font: "Source Sans Pro", sans-serif;
+
+  --bg-gradient1: linear-gradient(90deg, #00ff00de, var(--primary-color));
+  --bg-gradient2: linear-gradient(45deg, #F0A500 20%, #64b5f6, #f321d7);
+  --bg-gradient3: linear-gradient(-45deg, #acdb00, var(--primary-color));
+  --bg-gradient4: linear-gradient(45deg, #00ff00de, var(--primary-color));
+  --bg-gradient5: linear-gradient(-45deg, #acdb00 40%, var(--primary-color));
+
+  --primary-gradient: var(--bg-gradient4);
+}
