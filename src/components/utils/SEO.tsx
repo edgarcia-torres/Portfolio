@@ -13,7 +13,7 @@ const SEO = () => {
   const image = "featuredImage.png";
   const domain =
     process.env.NODE_ENV === "production"
-      ? "https://www.sumukhakb210.in/"
+      ? ""    //FIX THIS
       : "http://localhost:3000/";
   const formattedTitle = title;
   const url = router.pathname === "/" ? "/" : router.pathname;

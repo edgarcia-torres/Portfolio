@@ -40,7 +40,7 @@ export const sendMail = async (
     let info = await transporter.sendMail({
       from: process.env.EMAIL_USER, // sender address
       to: "edgardavidgt@gmail.com", // list of receivers
-      subject: `${email} is contacted you from www.https://sumukhakb210.in website!!`, // Subject line
+      subject: `${email} is contacted you from  website!!`, // Subject line
       text: "Reach out with you", // plain text body
       html: `
       <h3>Name:- ${name}</h3>
