@@ -3,32 +3,31 @@ import React from "react";
 
 const Intro = () => {
   const tools = [
-    "JavaScript (ES6+)",
+    "Node",
     "React.js",
     "Next.js",
-    "Wordpress",
+    "Angular",
+    "Express.js",
+    "JavaScript (ES6+)",
     "Mongo DB",
-    "TypeScript",
+    "PostgreSQL",
+    "TypeScript"
   ];
 
   return (
     <>
       <Title name="My Skills" />
       <p className="subtitle-5 description">
-        Since web technologies always move at a rapid pace, I&rsquo;m always
-        eager to learn different technologies and build projects using those
-        technologies.
+        As web technologies are constantly advancing quickly, I am enthusiastic about acquiring knowledge on various technologies and utilizing them in my projects.
       </p>
       <p className="subtitle-5 description">
-        Also, if the project that I&rsquo;m working for the company needs
-        different tools, I&rsquo;m willing to learn those things. When working
-        with teams, I tailor my approach to your needs. One tool does not work
-        for everybody, and I always aim to achieve the best results for who
-        I&rsquo;m currently working with.
+        If my current challenges require the use of different tools, I am open to learning them. Furthermore, when collaborating with a team, I adapt according to their requirements. Each team has its unique needs, and I strive to deliver the best outcomes for the current team I am working with.
       </p>
       <p className="subtitle-5 description">
-        Here&rsquo;s just a few of the Technologies / Tools I&rsquo;ve worked
-        with in the past:-
+        This web site has been created using Next.js framework and uses bootstrap, Sass and Chakra UI to implement the graphics.
+      </p>
+      <p className="subtitle-5 description">
+        Here is just a few of the Technologies and tools I have worked with:
       </p>
       <ul>
         {tools.map(tool => (

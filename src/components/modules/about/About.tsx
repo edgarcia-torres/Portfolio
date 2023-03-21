@@ -26,15 +26,15 @@ const About = () => {
               <Title name="About Myself" />
               <h4>Electronic engineer and computer programmer</h4>
               <p className="subtitle-5 description">
-
-                currently working as <span>Front End developer</span>.
-                I am from Colombia. I am passionate about working on projects.
+                Graduated as computer programmer from <b>Seneca College</b>.
               </p>
               <p className="subtitle-5 description">
-                I’m worked as Front End developer in a startup company called
-                <b> Beauty Wall Spot</b>, mangalore for almost 1 Year. Here i
-                worked with building custom wordpress websites. I’m also worked
-                with <b>Moonhive</b> company as intern for 3 months.
+                Interested in working as fullstack developer, with experience developing web apps using frameworks like Next.js, Angular, React.js
+                and Express.js using SQl and noSQL databases.
+              </p>
+              <p className="subtitle-5 description">
+                Currently working as <span>Front End developer</span> as volunteer in a startup company called
+                <b> TOlindo deliveries</b>,  since October 2022
               </p>
 
               <div className="btnContainer">
