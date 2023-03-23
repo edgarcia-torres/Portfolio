@@ -4,7 +4,7 @@ import NextImg from "next/image";
 import Title from "@/elements/Title";
 import Button from "@/elements/Button";
 import { useRouter } from "next/router";
-import AboutImage from "@/assets/edgar2.jpg";
+import AboutImage from "@/assets/Edgar2.jpg";
 import { scroller } from "react-scroll";
 
 const About = () => {
@@ -18,7 +18,7 @@ const About = () => {
               <NextImg
                 src={AboutImage}
                 layout="responsive"
-                alt="About  Image"
+                alt="Owner of the page picture"
               />
             </div>
 
