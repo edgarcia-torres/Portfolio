@@ -4,7 +4,7 @@ import NextImg from "next/image";
 import Title from "@/elements/Title";
 import Button from "@/elements/Button";
 import { useRouter } from "next/router";
-import AboutImage from "@/assets/edgargt.jpg";
+import AboutImage from "@/assets/edgar2.jpg";
 import { scroller } from "react-scroll";
 
 const About = () => {
